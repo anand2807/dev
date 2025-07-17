@@ -1,0 +1,53 @@
+{
+  "volatility_threshold": 0.15,
+  "pcr_bullish_threshold": 0.8,
+  "pcr_bearish_threshold": 1.2,
+  "min_time_to_expiry": 7,
+  "max_time_to_expiry": 45,
+  "max_positions": 20,
+  "max_daily_loss_pct": 2.0,
+  "max_portfolio_delta": 1000,
+  "max_portfolio_gamma": 500,
+  "risk_free_rate": 0.06,
+  "auto_trading": false,
+  "lot_size": 50,
+  "commission_rate": 0.001,
+  "slippage": 0.002,
+  "market_hours": {
+    "start": "09:15",
+    "end": "15:30"
+  },
+  "strategy_parameters": {
+    "directional_volatility": {
+      "confidence_threshold": 0.6,
+      "profit_target": 0.3,
+      "stop_loss": 0.5
+    },
+    "volatility_expansion": {
+      "confidence_threshold": 0.7,
+      "profit_target": 0.5,
+      "stop_loss": 1.0
+    },
+    "mean_reversion": {
+      "confidence_threshold": 0.6,
+      "profit_target": 0.4,
+      "stop_loss": 0.6
+    }
+  },
+  "risk_management": {
+    "max_single_position_risk": 0.005,
+    "max_portfolio_risk": 0.02,
+    "position_sizing_method": "fixed_risk",
+    "correlation_limit": 0.7
+  },
+  "data_sources": {
+    "primary": "NSE",
+    "backup": "BSE",
+    "refresh_interval": 60
+  },
+  "notifications": {
+    "email_enabled": false,
+    "telegram_enabled": false,
+    "webhook_enabled": false
+  }
+}
